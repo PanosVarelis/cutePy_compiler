@@ -1,0 +1,133 @@
+Name: max3, Level: 1, Offset: 32
+Entities:
+x, x/12/cv
+
+y, y/16/cv
+
+z, z/20/cv
+
+m, m/24
+
+T_1, T_1/28
+
+Name: fib, Level: 1, Offset: 32
+Entities:
+x, x/12/cv
+
+T_2, T_2/16
+
+T_3, T_3/20
+
+T_4, T_4/24
+
+T_5, T_5/28
+
+Name: divides, Level: 2, Offset: 32
+Entities:
+x, x/12/cv
+
+y, y/16/cv
+
+T_6, T_6/20
+
+T_7, T_7/24
+
+T_8, T_8/28
+
+Name: isPrime, Level: 1, Offset: 28
+Entities:
+x, x/12/cv
+
+i, i/16
+
+divides, divides/44/20
+
+T_9, T_9/20
+
+T_10, T_10/24
+
+Name: sqr, Level: 2, Offset: 24
+Entities:
+x, x/12/cv
+
+T_11, T_11/16
+
+T_12, T_12/20
+
+Name: quad, Level: 1, Offset: 28
+Entities:
+x, x/12/cv
+
+y, y/16
+
+sqr, sqr/72/20
+
+T_13, T_13/20
+
+T_14, T_14/24
+
+Name: leap, Level: 1, Offset: 32
+Entities:
+year, year/12/cv
+
+T_15, T_15/16
+
+T_16, T_16/20
+
+T_17, T_17/24
+
+T_18, T_18/28
+
+Name: table, Level: 1, Offset: 36
+Entities:
+x, x/12/cv
+
+i, i/16
+
+j, j/20
+
+T_19, T_19/24
+
+T_20, T_20/28
+
+T_21, T_21/32
+
+Name: decisions, Level: 1, Offset: 20
+Entities:
+flag, flag/12/cv
+
+T_22, T_22/16
+
+Name: main, Level: 1, Offset: 28
+Entities:
+i, i/12
+
+T_23, T_23/16
+
+T_24, T_24/20
+
+T_25, T_25/24
+
+[Name: global, Level: 0, Offset: 20
+Entities:
+counterFunctionCalls, counterFunctionCalls/12
+
+multiplier, multiplier/16
+
+max3, max3/3/20
+
+fib, fib/21/20
+
+isPrime, isPrime/54/20
+
+quad, quad/77/20
+
+leap, leap/88/20
+
+table, table/104/20
+
+decisions, decisions/121/20
+
+main, main/158/0
+
+]

@@ -1,0 +1,397 @@
+1: begin_block, program, _, _
+
+2: begin_block, max3, _, _
+
+3: +, counterFunctionCalls, 1, T_1
+
+4: =, T_1, _, counterFunctionCalls
+
+5: >, x, y, 7
+
+6: jump, _, _, 9
+
+7: >, x, z, 9
+
+8: jump, _, _, 11
+
+9: =, x, _, m
+
+10: jump, _, _, 18
+
+11: >, y, x, 13
+
+12: jump, _, _, 15
+
+13: >, y, z, 15
+
+14: jump, _, _, 17
+
+15: =, y, _, m
+
+16: jump, _, _, 18
+
+17: =, z, _, m
+
+18: ret, m, _, _
+
+19: end_block, max3, _, _
+
+20: begin_block, fib, _, _
+
+21: +, counterFunctionCalls, 1, T_2
+
+22: =, T_2, _, counterFunctionCalls
+
+23: <, x, 0, 25
+
+24: jump, _, _, 27
+
+25: ret, 1, _, _
+
+26: jump, _, _, 41
+
+27: ==, x, 0, 31
+
+28: jump, _, _, 31
+
+29: ==, x, 1, 31
+
+30: jump, _, _, 33
+
+31: ret, 1, _, _
+
+32: jump, _, _, 41
+
+33: call, fib, _, _
+
+34: -, x, 1, T_3
+
+35: par, T_3, cv, _
+
+36: call, fib, _, _
+
+37: -, x, 2, T_4
+
+38: par, T_4, cv, _
+
+39: +, fib, fib, T_5
+
+40: ret, T_5, _, _
+
+41: end_block, fib, _, _
+
+42: begin_block, isPrime, _, _
+
+43: begin_block, divides, _, _
+
+44: +, counterFunctionCalls, 1, T_6
+
+45: =, T_6, _, counterFunctionCalls
+
+46: //, y, x, T_7
+
+47: *, T_7, x, T_8
+
+48: ==, y, T_8, 50
+
+49: jump, _, _, 52
+
+50: ret, 1, _, _
+
+51: jump, _, _, 53
+
+52: ret, 0, _, _
+
+53: end_block, divides, _, _
+
+54: +, counterFunctionCalls, 1, T_9
+
+55: =, T_9, _, counterFunctionCalls
+
+56: =, 2, _, i
+
+57: <, i, x, 59
+
+58: jump, _, _, 68
+
+59: call, divides, _, _
+
+60: par, i, cv, _
+
+61: par, x, cv, _
+
+62: ==, divides, 1, 64
+
+63: jump, _, _, 66
+
+64: ret, 0, _, _
+
+65: +, i, 1, T_10
+
+66: =, T_10, _, i
+
+67: jump, _, _, 57
+
+68: ret, 1, _, _
+
+69: end_block, isPrime, _, _
+
+70: begin_block, quad, _, _
+
+71: begin_block, sqr, _, _
+
+72: +, counterFunctionCalls, 1, T_11
+
+73: =, T_11, _, counterFunctionCalls
+
+74: *, x, x, T_12
+
+75: ret, T_12, _, _
+
+76: end_block, sqr, _, _
+
+77: +, counterFunctionCalls, 1, T_13
+
+78: =, T_13, _, counterFunctionCalls
+
+79: call, sqr, _, _
+
+80: par, x, cv, _
+
+81: call, sqr, _, _
+
+82: par, x, cv, _
+
+83: *, sqr, sqr, T_14
+
+84: =, T_14, _, y
+
+85: ret, y, _, _
+
+86: end_block, quad, _, _
+
+87: begin_block, leap, _, _
+
+88: +, counterFunctionCalls, 1, T_15
+
+89: =, T_15, _, counterFunctionCalls
+
+90: %, year, 4, T_16
+
+91: ==, T_16, 0, 93
+
+92: jump, _, _, 96
+
+93: %, year, 100, T_17
+
+94: !=, T_17, 0, 96
+
+95: jump, _, _, 99
+
+96: %, year, 400, T_18
+
+97: ==, T_18, 0, 99
+
+98: jump, _, _, 101
+
+99: ret, 1, _, _
+
+100: jump, _, _, 102
+
+101: ret, 0, _, _
+
+102: end_block, leap, _, _
+
+103: begin_block, table, _, _
+
+104: =, 1, _, i
+
+105: =, 1, _, j
+
+106: *, x, 2, T_19
+
+107: =, T_19, _, multiplier
+
+108: <=, i, x, 110
+
+109: jump, _, _, 119
+
+110: <=, j, x, 112
+
+111: jump, _, _, 116
+
+112: out, x, _, _
+
+113: +, j, 1, T_20
+
+114: =, T_20, _, j
+
+115: jump, _, _, 110
+
+116: +, i, 1, T_21
+
+117: =, T_21, _, i
+
+118: jump, _, _, 108
+
+119: end_block, table, _, _
+
+120: begin_block, decisions, _, _
+
+121: <=, flag, 1, 123
+
+122: jump, _, _, 125
+
+123: ret, 1821, _, _
+
+124: jump, _, _, 152
+
+125: >=, flag, 2, 127
+
+126: jump, _, _, 129
+
+127: <=, flag, 10, 129
+
+128: jump, _, _, 135
+
+129: <, flag, 5, 131
+
+130: jump, _, _, 133
+
+131: out, 5, _, _
+
+132: jump, _, _, 134
+
+133: out, 10, _, _
+
+134: jump, _, _, 152
+
+135: <=, flag, 20, 137
+
+136: jump, _, _, 147
+
+137: <, flag, 13, 139
+
+138: jump, _, _, 141
+
+139: out, 13, _, _
+
+140: jump, _, _, 146
+
+141: <=, flag, 18, 143
+
+142: jump, _, _, 145
+
+143: out, 18, _, _
+
+144: jump, _, _, 146
+
+145: out, 20, _, _
+
+146: jump, _, _, 152
+
+147: <=, flag, 30, 149
+
+148: jump, _, _, 151
+
+149: out, 30, _, _
+
+150: jump, _, _, 152
+
+151: out, 40, _, _
+
+152: call, decisions, _, _
+
+153: //, flag, 2, T_22
+
+154: par, T_22, cv, _
+
+155: ret, decisions, _, _
+
+156: end_block, decisions, _, _
+
+157: begin_block, main, _, _
+
+158: =, 0, _, counterFunctionCalls
+
+159: =, 2, _, multiplier
+
+160: in, T_23, _, i
+
+161: out, i, _, _
+
+162: =, 1600, _, i
+
+163: <=, i, 2000, 165
+
+164: jump, _, _, 171
+
+165: call, leap, _, _
+
+166: par, i, cv, _
+
+167: out, leap, _, _
+
+168: +, i, 400, T_24
+
+169: =, T_24, _, i
+
+170: jump, _, _, 163
+
+171: call, leap, _, _
+
+172: par, 2023, cv, _
+
+173: out, leap, _, _
+
+174: call, leap, _, _
+
+175: par, 2024, cv, _
+
+176: out, leap, _, _
+
+177: call, quad, _, _
+
+178: par, 3, cv, _
+
+179: out, quad, _, _
+
+180: call, fib, _, _
+
+181: par, 5, cv, _
+
+182: out, fib, _, _
+
+183: call, leap, _, _
+
+184: call, decisions, _, _
+
+185: par, 45, cv, _
+
+186: par, decisions, cv, _
+
+187: out, leap, _, _
+
+188: =, 1, _, i
+
+189: <=, i, 12, 191
+
+190: jump, _, _, 197
+
+191: call, isPrime, _, _
+
+192: par, i, cv, _
+
+193: out, isPrime, _, _
+
+194: +, i, 1, T_25
+
+195: =, T_25, _, i
+
+196: jump, _, _, 189
+
+197: out, counterFunctionCalls, _, _
+
+198: end_block, main, _, _
+
+199: end_block, program, _, _
